@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Continuous Infinite Background Image Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: black;
+        }
+        
+        .slider-container {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .slider {
+            display: flex;
+            position: absolute;
+            width: 500%; /* Total width of all slides combined */
+            height: 100%;
+            animation: slide 10s linear infinite; /* Fast speed: 10s for all images to move */
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+            flex-shrink: 0;
+        }
+        
+        /* Animation for continuous movement */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%); /* Move all the slides */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide" style="background-image: url('1.jpg');"></div>
+            <div class="slide" style="background-image: url('2.jpg');"></div>
+            <div class="slide" style="background-image: url('3.jpg');"></div>
+            <div class="slide" style="background-image: url('4.jpg');"></div>
+            <div class="slide" style="background-image: url('5.jpg');"></div>
+            <!-- Duplicate slides for seamless loop -->
+            <div class="slide" style="background-image: url('1.jpg');"></div>
+            <div class="slide" style="background-image: url('2.jpg');"></div>
+            <div class="slide" style="background-image: url('3.jpg');"></div>
+            <div class="slide" style="background-image: url('4.jpg');"></div>
+            <div class="slide" style="background-image: url('5.jpg');"></div>
+        </div>
+    </div>
+</body>
+</html>

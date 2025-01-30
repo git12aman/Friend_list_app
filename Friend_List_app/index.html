@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Friend List App</h1>
+        <div class="menu">
+            <button onclick="toggleSection('addFriendSection')">Add Friend</button>
+            <button onclick="toggleSection('removeFriendSection')">Remove Friend</button>
+            <button onclick="toggleSection('editFriendSection')">Edit Friend</button>
+            <button onclick="listFriends()">List Friends</button>
+            <button onclick="toggleSection('searchFriendSection')">Search Friend</button>
+            <button onclick="countFriends()">Count Friends</button>
+            <button onclick="clearFriends()">Clear Friend List</button>
+        </div>
+
+        <div id="addFriendSection" class="toggle-section" style="display: none;">
+            <input type="text" id="addName" placeholder="Friend's Name">
+            <input type="text" id="addStatus" placeholder="Friend's Status">
+            <button onclick="addFriend()">Add</button>
+        </div>
+
+        <div id="removeFriendSection" class="toggle-section" style="display: none;">
+            <input type="text" id="removeName" placeholder="Friend's Name to Remove">
+            <button onclick="removeFriend()">Remove</button>
+        </div>
+
+        <div id="editFriendSection" class="toggle-section" style="display: none;">
+            <input type="text" id="editOldName" placeholder="Current Friend's Name">
+            <input type="text" id="editNewName" placeholder="New Friend's Name">
+            <input type="text" id="editNewStatus" placeholder="New Friend's Status">
+            <button onclick="editFriend()">Edit</button>
+        </div>
+
+        <div id="searchFriendSection" class="toggle-section" style="display: none;">
+            <input type="text" id="searchName" placeholder="Friend's Name to Search">
+            <button onclick="searchFriend()">Search</button>
+        </div>
+
+        <div class="friend-list" id="friendList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
