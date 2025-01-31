@@ -11,10 +11,9 @@ Search Friend: Enables users to search for a specific friend by their name.
 Count Friends: Shows the total number of friends in the list.
 Clear Friend List: Clears the entire list of friends.
 Blurred Background: Features a blurred image background for a visually appealing interface.
-Project Setup:
 
-Clone the repository: git clone [repository URL]
-Open the index.html file in your web browser.
+
+
 Project Structure:
 
 index.html: Main HTML file that renders the user interface.
